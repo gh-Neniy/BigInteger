@@ -1,4 +1,8 @@
+#pragma once
 #include "BigInteger.h"
+
+#ifndef NENIY_RATIONAL
+#define NENIY_RATIONAL
 
 class Rational {
  public:
@@ -251,3 +255,5 @@ std::string Rational::asDecimal(size_t precision) const {
 bool Rational::IsNegative() const { return numerator_.IsNegative(); }
 
 Rational::operator double() const { return std::stod(asDecimal(100)); }
+
+#endif // NENIY_BIGINTEGER

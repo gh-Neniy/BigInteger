@@ -1,3 +1,4 @@
+#pragma once
 #include <limits.h>
 
 #include <compare>
@@ -5,6 +6,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
+#ifndef NENIY_BIGINTEGER
+#define NENIY_BIGINTEGER
 
 class BigInteger {
  public:
@@ -485,3 +489,5 @@ bool BigInteger::IsNegative() const { return is_negative_; }
 const std::vector<BigInteger::BlockT>& BigInteger::GetBlocks() const {
   return blocks_;
 }
+
+#endif // NENIY_BIGINTEGER
